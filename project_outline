@@ -1,0 +1,45 @@
+Team Death
+Maelle Vance
+Rachael Wisecarver
+Judy Vue
+
+Project Plan Outline
+
+Homepage/Login page/index.html
+Find a logo
+Nav bar - Instructions, About Us, Resources
+Intro under the big HERO logo
+Create login/password submit field *learn how to do it*
+After user submits, “Take Test” button appears
+Sticky footer (on all pages) with copyright info of M-CHART
+
+Disclaimer/Instructions page
+Same header/footer on all pages
+Instructions and legal disclaimer to user
+User presses “Proceed button” which links to actual test
+
+Question pages (technically divs x 10)
+Three questions per div
+Radio buttons yes/no
+Arrow buttons to proceed to next question
+Clear, sleek ,minimalist aesthetics w/ no overcrowding
+Make answers required
+Left arrow button as stretch goal
+Toggle menu for referring back to different questions as a stretch goal
+Potential JS:
+Using similar logic to “About Me” project
+User has three possible outcomes: “Low-risk 0-2, medium-risk 3-7, high-risk 8-20”
+
+Confirm results page
+Accordion menu for user to review their questions and make changes if necessary
+Give user option option to print test and results as PDF - stretch goal
+
+Results page
+Three possible outcomes, w/ brief write-up on what it means to be low, medium, high risk
+Use legal disclaimer
+No matter results, list the resources for user
+Use iFrames for Google Maps to the different resources
+
+About Us page
+Three circular pics of us with out blurbs
+Stretch goal: CSS animation on hover
