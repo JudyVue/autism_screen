@@ -18,8 +18,8 @@ Same header/footer on all pages
 Instructions and legal disclaimer to user
 User presses “Proceed button” which links to actual test
 
-Question pages (technically divs x 10)
-Three questions per div
+Test (technically multiple divs for each series of questions )
+2 or 4 questions per div for now
 Radio buttons yes/no
 Arrow buttons to proceed to next question
 Clear, sleek ,minimalist aesthetics w/ no overcrowding
