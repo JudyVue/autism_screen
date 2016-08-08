@@ -45,6 +45,12 @@ console.log(questionArray);
 
 //Event Handler- to tally user score when Event Listener is triggered
 
+function handleScore(event){
+  event.preventDefault();
+  var userSelections = event.target.name;
+  if
+}
 
 
-//Event Listener- to capture user input 
+//Event Listener- to capture user input from test_page.html and run event handler function handleScore
+document.getElementsByValue('my_radios').addEventListener('change', handleScore);
