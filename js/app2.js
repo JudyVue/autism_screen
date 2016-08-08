@@ -24,9 +24,7 @@ for (var i = 0; i < accordion.length; i++) {
 var yesAndNoArray = [];
 
 function grabYesAndNos() {
-  var answers = document.getElementsByName('input.radio_buttons');
-  var test = answers.includes('Yes');
-  console.log(test);
+  var answers = document.getElementsByTagName('name');
   yesAndNoArray.push(answers);
   console.log(answers);
 }
