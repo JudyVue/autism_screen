@@ -47,10 +47,11 @@ console.log(questionArray);
 
 function handleScore(event){
   event.preventDefault();
-  var userSelections = event.target.name;
-  if
+  var userSelections = event.target.value;
+  userAnswers.push(userSelections);
+  console.log(userAnswers);
 }
 
 
 //Event Listener- to capture user input from test_page.html and run event handler function handleScore
-document.getElementsByValue('my_radios').addEventListener('change', handleScore);
+document.getElementsByValue('score').addEventListener('change', handleScore);
