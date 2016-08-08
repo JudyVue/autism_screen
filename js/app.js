@@ -5,6 +5,7 @@ var score = 0;
 var userSelections;
 var questionArray = [];
 var userAnswers = [];
+var radioButtons = document.getElementsByClassName('radio_buttons');
 
 //Creating Object Constructor Function
 function QuestionCreator(instanceName, answer){
@@ -44,17 +45,18 @@ var questionTwenty = new QuestionCreator('Question 20', 'no');
 
 //Event Handler- to tally user score when Event Listener is triggered
 
-function handleScore(event){
+function handleArray(event){
   event.preventDefault();
-  userSelections = document.getElementsByClassName('radio_buttons');
-  for(var i = 0; i < userSelections.length; i++){
-    var butts = userSelections[i].value;
-    console.log(butts);
-    userAnswers.push(butts);
-  }
+  userSelections = event.target.value;
+  userAnswers.push(userSelections);
+  console.log('Hello');
 };
 
 
+for (var i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener('change', handleArray);
+}
+
 
 //Event Listener- to capture user input from test_page.html and run event handler function handleScore
-document.getElementById('submit').addEventListener('click', handleScore);
+// document.getElementById('submit').addEventListener('click', handleScore);
