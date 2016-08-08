@@ -49,7 +49,6 @@ function handleArray(event){
   event.preventDefault();
   userSelections = event.target.value;
   userAnswers.push(userSelections);
-  console.log('Hello');
 };
 
 
@@ -57,6 +56,15 @@ for (var i = 0; i < radioButtons.length; i++) {
   radioButtons[i].addEventListener('change', handleArray);
 }
 
+function handleScore(event){
+  for (var i = 0; i < userAnswers.length; i++) {
+    if (userAnswers[i] === 'score') {
+      score++;
+    }
+  }
+  console.log(userAnswers);
+  console.log(score);
+}
 
 //Event Listener- to capture user input from test_page.html and run event handler function handleScore
-// document.getElementById('submit').addEventListener('click', handleScore);
+document.getElementById('submit').addEventListener('click', handleScore);
