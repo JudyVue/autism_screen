@@ -41,3 +41,17 @@ var questionTwenty = new QuestionCreator('Question 20', 'no');
 //Running Function and Checking Array
 QuestionCreator();
 console.log(questionArray);
+
+
+//Event Handler- to tally user score when Event Listener is triggered
+
+function handleScore(event){
+  event.preventDefault();
+  var userSelections = event.target.value;
+  userAnswers.push(userSelections);
+  console.log(userAnswers);
+}
+
+
+//Event Listener- to capture user input from test_page.html and run event handler function handleScore
+document.getElementsByValue('score').addEventListener('change', handleScore);
