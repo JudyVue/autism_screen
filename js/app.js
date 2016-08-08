@@ -41,3 +41,10 @@ var questionTwenty = new QuestionCreator('Question 20', 'no');
 //Running Function and Checking Array
 QuestionCreator();
 console.log(questionArray);
+
+
+//Event Handler- to tally user score when Event Listener is triggered
+
+
+
+//Event Listener- to capture user input 
