@@ -1,0 +1,34 @@
+button.accordion {
+  width: 50%;
+  background-color: #A9A9A9;
+  cursor: pointer;
+  outline: dotted 2px orange;
+}
+
+button.accordion:after {
+  /*this makes plus sign*/
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+  /*this is minus sign*/
+    content: "\2796";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
