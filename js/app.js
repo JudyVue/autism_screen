@@ -2,12 +2,14 @@
 
 //Establishing Global Variables
 var score = 0;
+var userSelections;
 var questionArray = [];
 var userAnswers = [];
+var radioButtons = document.getElementsByClassName('radio_buttons');
 
 //Creating Object Constructor Function
-function QuestionCreator(name, answer){
-  this.name = name;
+function QuestionCreator(instanceName, answer){
+  this.instanceName = instanceName;
   this.answer = answer;
   questionArray.push(this);
 };
@@ -39,19 +41,22 @@ var questionNineteen = new QuestionCreator('Question 19', 'no');
 var questionTwenty = new QuestionCreator('Question 20', 'no');
 
 //Running Function and Checking Array
-QuestionCreator();
-console.log(questionArray);
 
 
 //Event Handler- to tally user score when Event Listener is triggered
 
-function handleScore(event){
+function handleArray(event){
   event.preventDefault();
-  var userSelections = event.target.value;
+  userSelections = event.target.value;
   userAnswers.push(userSelections);
-  console.log(userAnswers);
+  console.log('Hello');
+};
+
+
+for (var i = 0; i < radioButtons.length; i++) {
+  radioButtons[i].addEventListener('change', handleArray);
 }
 
 
 //Event Listener- to capture user input from test_page.html and run event handler function handleScore
-document.getElementsByValue('score').addEventListener('change', handleScore);
+// document.getElementById('submit').addEventListener('click', handleScore);
