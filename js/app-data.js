@@ -17,6 +17,7 @@ function handleNewLogin() {
   loginArrayStringified = JSON.stringify(loginArray);
   localStorage.setItem('loginArrayStringified', loginArrayStringified);
   console.log(loginArrayStringified);
+  location.href = 'instructions.html';
 
 }
 
