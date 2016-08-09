@@ -1,6 +1,7 @@
 'use strict';
 var loginForm = document.getElementById('loginForm');
 var loginArray = [];
+var loginArrayStringified;
 
 
 function handleNewLogin() {
@@ -13,7 +14,9 @@ function handleNewLogin() {
     loginArray.push(this);
   }
   new Login(username, password);
-  
+  loginArrayStringified = JSON.stringify(loginArray);
+  localStorage.setItem('loginArrayStringified', loginArrayStringified);
+  console.log(loginArrayStringified);
 
 }
 
