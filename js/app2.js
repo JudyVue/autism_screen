@@ -10,7 +10,6 @@ for (var i = 0; i < accordion.length; i++) {
   };
 }
 
-
 //judy's code for retaining user's answers in collapsed answer review in accordion menu
 // 1.Use local storage as answers in array with yes and no's as strings
 // 2. stringify to local storage
@@ -21,20 +20,20 @@ for (var i = 0; i < accordion.length; i++) {
 
 //need for loop to grab yes's and no's
 
-var checked;
+// var checked;
 var yesAndNoArray = [];
+var no = document.getElementsByName('No');
 
-function grabYesAndNos() {
-  if (userAnswers[0] === 'no_score'){
-    checked = 'yes';
-  } else {
-    checked = 'no';
+
+function grabYesAndNos(){
+for (var j = 0; j < userAnswers.length; j++) {
+  if (userAnswers[j] === 'score') {
+    console.log(no);
   }
-
-  yesAndNoArray.push(checked);
-  console.log(yesAndNoArray);
 }
 
-grabYesAndNos();
+function check() {
+  document.getElementsByTagName('input').checked = true;
+}
 
 // localStorage.setItem('userResultsForLocalStorage', JSON.stringify())
