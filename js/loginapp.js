@@ -1,7 +1,7 @@
 'use strict';
 var loginForm = document.getElementById('loginForm');
 var storedData = [];
-
+var loginTry = 0;
 
 function handleSignInAttempt() {
   event.preventDefault();
@@ -10,15 +10,24 @@ function handleSignInAttempt() {
   //username already exists logic:
   if (localStorage.loginArrayStringified) {
     storedData = JSON.parse(localStorage.loginArrayStringified);
-    for (var i = 0; i < storedData.length; i++) {
-      if (storedData[i].username === username && storedData[i].password !== password) {
-        alert('Username and password do not match. Please try again.');
-        event.target.username.value = null;
-        event.target.password.value = null;
-        return;
-      }
+    if (loginTry < 3){
+      for (var i = 0; i < storedData.length; i++) {
+        if (storedData[i].username === username && storedData[i].password !== password) {
+          alert('Username and password do not match. Please try again.');
+          event.target.username.value = null;
+          event.target.password.value = null;
+        }
+        loginTry++;
+        console.log(loginTry);
+        break;
+      };
     }
   }
+  if (loginTry === 3){
+    alert('You have reached the maximum login attempts allowed. Please create a new account.');
+    location.href = 'index.html';
+  };
 }
+
 
 loginForm.addEventListener('submit', handleSignInAttempt);
