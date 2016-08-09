@@ -32,3 +32,14 @@ div.panel.show {
     opacity: 1;
     max-height: 500px;
 }
+
+#test_questions > div {
+  outline: dotted 2px orange;
+}
+
+button.next {
+  width: 500px;
+  height: 100px;
+  font-size: 30px;
+  outline: dotted 2px green;
+}
