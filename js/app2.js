@@ -21,14 +21,18 @@ for (var i = 0; i < accordion.length; i++) {
 
 //need for loop to grab yes's and no's
 
+var checked;
 var yesAndNoArray = [];
 
 function grabYesAndNos() {
-  var answers = document.getElementsByName('input.radio_buttons');
-  var test = answers.includes('Yes');
-  console.log(test);
-  yesAndNoArray.push(answers);
-  console.log(answers);
+  if (userAnswers[0] === 'no_score'){
+    checked = 'yes';
+  } else {
+    checked = 'no';
+  }
+
+  yesAndNoArray.push(checked);
+  console.log(yesAndNoArray);
 }
 
 grabYesAndNos();
