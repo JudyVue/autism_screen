@@ -40,8 +40,14 @@ var questionEighteen = new QuestionCreator('Question 18', 'no');
 var questionNineteen = new QuestionCreator('Question 19', 'no');
 var questionTwenty = new QuestionCreator('Question 20', 'no');
 
+var userAnswersStringified = [];
 //Running Function and Checking Array
 
+function createLocalStorageofScoreNoScoreArray(){
+  userAnswersStringified = JSON.stringify(userAnswers);
+  localStorage.setItem('userAnswersStringified', userAnswersStringified);
+  console.log(userAnswersStringified + ' is the stringified array.');
+}
 
 //Event Handler- to tally user score when Event Listener is triggered
 
@@ -64,7 +70,13 @@ function handleScore(event){
   }
   console.log(userAnswers);
   console.log(score);
+  createLocalStorageofScoreNoScoreArray();
 }
 
 //Event Listener- to capture user input from test_page.html and run event handler function handleScore
 document.getElementById('submit').addEventListener('click', handleScore);
+//setting userAnswers to local storage, make function happen after array is filled
+
+
+
+// var userAnswersFromLocalStorage = JSON.parse(localStorage.getItem('localStorageUserAnswers'));
