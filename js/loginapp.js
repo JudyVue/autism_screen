@@ -25,9 +25,13 @@ function handleSignInAttempt() {
   }
   if (loginTry === 3){
     alert('You have reached the maximum login attempts allowed. Please create a new account.');
-    location.href = 'index.html';
-  };
+    location.href = 'results.html';
+  }
+  for (var j = 0; j < storedData.length; j++) {
+    if (storedData[j].username === username && storedData[j].password === password){
+      location.href = 'instructions.html';
+    }
+  }
 }
-
 
 loginForm.addEventListener('submit', handleSignInAttempt);
