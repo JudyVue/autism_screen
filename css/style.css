@@ -109,6 +109,16 @@ main {
   position: relative;
 }
 
+p {
+  color: #51617a;
+  text-align: justify;
+  width: 499px;
+  margin-left: 25%;
+  margin-top: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+}
+
 button {
   margin: 10px 0 0 0;
   border: none;
@@ -130,6 +140,7 @@ footer {
   background: rgba(81,97,122,0.9);
   height: 50px;
   width: 100%;
-  position: relative;
+  clear: both;
   margin-top: 30px;
+
 }
