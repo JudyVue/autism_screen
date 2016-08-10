@@ -1,6 +1,5 @@
 'use strict';
 
-var checked = false;
 var testSectionDivArray = [];
 
 function makeTestSectionDivArray() {
@@ -15,11 +14,23 @@ makeTestSectionDivArray();
 function makeUserAnswerAllQuestions(){
   for(var j = 0; j < radioButtons.length; j++) {
     if(radioButtons[j].checked === false){
-      console.log('A radio buttons is not checked.');
-      alert('A radio buttons is not checked.');
-      break;
-    } else {
-      console.log('Radio butons are checked.');
+      console.log('a button isnt checked.');
+      alert('You must complete all questions.');
     }
   }
 }
+
+makeUserAnswerAllQuestions();
+
+
+// function logArrayElements(element, index, array) {
+//   console.log('a[' + index + '] = ' + element);
+// }
+//
+// // Notice that index 2 is skipped since there is no item at
+// // that position in the array.
+// [2, 5, , 9].forEach(logArrayElements);
+// // logs:
+// // a[0] = 2
+// // a[1] = 5
+// // a[3] = 9
