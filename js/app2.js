@@ -136,8 +136,6 @@ function makeUserAnswerAllQuestions(){
 // }
 
 document.getElementById('button1').addEventListener('click', clickSection1Button);
-
-
 document.getElementById('button2').addEventListener('click', clickSection2Button);
 document.getElementById('button3').addEventListener('click', clickSection3Button);
 document.getElementById('button4').addEventListener('click', clickSection4Button);
