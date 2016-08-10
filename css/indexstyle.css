@@ -1,0 +1,43 @@
+img {
+  margin: 0 auto;
+  text-align: center;
+  height: 500px;
+  width: 700px;
+}
+
+main #loginForm {
+  padding: 5px;
+  margin: 10px 0 0 0;
+  color: #51617a;
+}
+main h1 {
+  color: #EFEFEF;
+  font-size: 50px;
+  font-family: "Sanchez", serif;
+  letter-spacing: .1em;
+  position: absolute;
+  top: 20%;
+  left: 29%;
+}
+main h2 {
+  color: #EFEFEF;
+  font-size: 20px;
+
+}
+
+main p {
+  color: #51617a;
+  text-align: justify;
+  width: 499px;
+  margin-left: 25%;
+  margin-top: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+}
+
+#center_me {
+  text-align: center;
+}
+#password {
+  margin-bottom: 10px;
+}
