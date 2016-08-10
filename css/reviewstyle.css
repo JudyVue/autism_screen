@@ -1,0 +1,45 @@
+.panel {
+  background-color: red;
+  width: 455px;
+  margin: 0 auto;
+}
+
+main h1 {
+  color: #51617a;
+  font-size: 30px;
+  font-family: "Sanchez", serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form p {
+  width: 455px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 18px;
+  word-wrap: break-word;
+  padding: 10px 0;
+}
+
+form {
+  margin-top: 10px;
+}
+
+#question_set1 {
+  height: 390px;
+}
+
+#question_set4 {
+  height: 360px;
+}
+#question_set2, #question_set3 {
+  height: 430px;
+}
+
+#question_set5 {
+  height: 460px;
+}
+
+.radio_buttons {
+  margin-top: 10px;
+}
