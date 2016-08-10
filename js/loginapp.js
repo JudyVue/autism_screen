@@ -25,7 +25,7 @@ function handleSignInAttempt() {
   }
   if (loginTry === 3){
     alert('You have reached the maximum login attempts allowed. Please create a new account.');
-    location.href = 'results.html';
+    location.href = 'index.html';
   }
   for (var j = 0; j < storedData.length; j++) {
     if (storedData[j].username === username && storedData[j].password === password){
