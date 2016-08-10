@@ -7,8 +7,10 @@ var score = 0;
 var reviewAnswersStringified;
 var userSelections;
 var userAnswers = [];
-var radioButtons = document.getElementsByClassName('radio_buttons');
 var radioButtonsNoScore = [];
+var radioButtonsYesScore = [];
+var radioButtons = document.getElementsByClassName('radio_buttons');
+
 
 function makeAccordion(){
   for (var i = 0; i < accordion.length; i++) {
@@ -28,36 +30,37 @@ function parseData(){
 
 }
 
-function getNoScore(){
-  for (var i = 0; i < radioButtons.length; i++){
-    if (radioButtons[i].value === 'no_score'){
-      radioButtonsNoScore.push(radioButtons[i].value);
-      console.log(radioButtonsNoScore);
-    }
-  }
-}
 getNoScore();
 
 function grabYesAndNos(){
-  for (var f = 0; f < reviewData.length; f++){
-    while (radioButtons[f].checked === true) {
-      console.log('tryingt to figure this out');
+  for (var j = 0; j < reviewData.length; j++){
+    if (reviewData[j] === 'no_score') {
+      radioButtonsNoScore[j].checked = true;
+      console.log('checking no scores');
+    }else {
+      radioButtonsYesScore[j].checked = true;
     }
   }
 }
 
+function getNoScore(){
+  for (var i = 0; i < radioButtons.length; i++){
+    if (radioButtons[i].value === 'no_score'){
+      radioButtonsNoScore.push(radioButtons[i]);
+    }
+  }
+}
 
+function getYesScore() {
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].value === 'score'){
+      radioButtonsYesScore.push(radioButtons[i]);
+    }
+  }
+}
 
-//   for (var f = 0; f < radioButtons.length; f++) {
-//     if ((reviewData[j] === 'score') && (radioButtons[f].value === 'score')) {
-//       radioButtons[f].checked = true;
-//     }
-//     if ((reviewData[j].value === 'no_score') && (radioButtons[f].value === 'no_score')) {
-//       radioButtons[f].checked = true;
-//     }
-//   }
-// }
-
+getYesScore();
+getNoScore();
 
 function createLocalStorageofScoreNoScoreArray(){
   reviewAnswersStringified = JSON.stringify(userAnswers);
