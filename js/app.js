@@ -71,6 +71,8 @@ function handleScore(event){
   console.log(userAnswers);
   console.log(score);
   createLocalStorageofScoreNoScoreArray();
+  var scoreStringified = JSON.stringify(score);
+  localStorage.setItem('score', scoreStringified);
 }
 
 //Event Listener- to capture user input from test_page.html and run event handler function handleScore
