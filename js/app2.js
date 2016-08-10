@@ -5,7 +5,6 @@ var accordion = document.getElementsByClassName('accordion');
 var reviewData = [];
 var score = 0;
 var reviewAnswersStringified;
-var userSelections;
 var userAnswers = [];
 var radioButtonsNoScore = [];
 var radioButtonsYesScore = [];
@@ -19,9 +18,6 @@ function makeAccordion(){
     };
   }
 }
-
-
-//code for retaining user's answers on reivewpage.html
 
 //parses the data
 function parseData(){
@@ -58,19 +54,24 @@ function getYesScore() {
 
 getYesScore();
 getNoScore();
+
 function createLocalStorageofScoreNoScoreArray(){
   reviewAnswersStringified = JSON.stringify(userAnswers);
   localStorage.setItem('reviewAnswersStringified', reviewAnswersStringified);
   console.log(reviewAnswersStringified + ' is the stringified array.');
 }
 
-function handleArray(event){
-  event.preventDefault();
-  userSelections = event.target.value;
-  userAnswers.push(userSelections);
+function handleArray() {
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked === true) {
+      userAnswers.push(radioButtons[i].value);
+    }
+  }
 };
 
 function handleScore(event){
+  event.preventDefault();
+  handleArray();
   for (var i = 0; i < userAnswers.length; i++) {
     if (userAnswers[i] === 'score') {
       score++;
@@ -88,8 +89,5 @@ makeAccordion();
 parseData();
 grabYesAndNos();
 
-for (var i = 0; i < radioButtons.length; i++) {
-  radioButtons[i].addEventListener('change', handleArray);
-}
-
+//event listener:
 document.getElementById('confirm').addEventListener('click', handleScore);
