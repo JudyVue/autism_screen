@@ -2,7 +2,7 @@ button.accordion {
   width: 50%;
   background-color: #A9A9A9;
   cursor: pointer;
-  outline: dotted 2px orange;
+
 }
 
 button.accordion:after {
