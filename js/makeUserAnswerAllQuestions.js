@@ -1,26 +1,25 @@
 'use strict';
 
 var checked = false;
-var TestSectionDivArray = [];
+var testSectionDivArray = [];
 
 function makeTestSectionDivArray() {
   for (var i = 0; i < document.getElementsByClassName('questionset').length; i++){
-    TestSectionDivArray.push(document.getElementsByClassName('questionset')[i]);
+    testSectionDivArray.push(document.getElementsByClassName('questionset')[i]);
   }
-  console.log(TestSectionDivArray);
+  // console.log(testSectionDivArray);
 }
+
+makeTestSectionDivArray();
 
 function makeUserAnswerAllQuestions(){
-  for (var i = 0; i < radioButtons.length; i++) {
-    if(!radioButtons[i].checked){
-      console.log('There is a radio button not checked.');
+  for(var j = 0; j < radioButtons.length; j++) {
+    if(radioButtons[j].checked === false){
+      console.log('A radio buttons is not checked.');
+      alert('A radio buttons is not checked.');
+      break;
+    } else {
+      console.log('Radio butons are checked.');
     }
   }
-}
-
-function makeTestSectionDivArray() {
-  for (var i = 0; i < document.getElementsByClassName('questionset').length; i++){
-    TestSectionDivArray.push(document.getElementsByClassName('questionset')[i]);
-  }
-  console.log(TestSectionDivArray);
 }
