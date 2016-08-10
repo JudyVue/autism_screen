@@ -1,0 +1,22 @@
+body {
+  height: 0px;
+}
+
+h1 {
+  color: #51617a;
+  font-size: 30px;
+  font-family: 'Sanchez', serif;
+}
+
+h2 {
+  color: #cc842f;
+  font-weight: bold;
+  font-family: 'Sanchez', serif;
+}
+
+img {
+  margin-top: 50px;
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+}
