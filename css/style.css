@@ -140,6 +140,7 @@ footer {
   background: rgba(81,97,122,0.9);
   height: 50px;
   width: 100%;
-  position: relative;
+  clear: both;
   margin-top: 30px;
+
 }
