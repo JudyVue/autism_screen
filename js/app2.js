@@ -10,6 +10,7 @@ var radioButtonsNoScore = [];
 var radioButtonsYesScore = [];
 var radioButtons = document.getElementsByClassName('radio_buttons');
 
+
 function makeAccordion(){
   for (var i = 0; i < accordion.length; i++) {
     accordion[i].onclick = function(){
@@ -22,7 +23,9 @@ function makeAccordion(){
 
 function parseData(){
   reviewData = JSON.parse(localStorage.userAnswersStringified);
+
 }
+
 
 //will check radio buttons with test answers data so user can review and change them
 function grabYesAndNos(){
@@ -36,8 +39,11 @@ function grabYesAndNos(){
   }
 }
 
+
 //we are getting all the buttons with a no score value
 function getNoScore(){
+
+  var counter = 0;
   for (var i = 0; i < radioButtons.length; i++){
     if (radioButtons[i].value === 'no_score'){
       radioButtonsNoScore.push(radioButtons[i]);
