@@ -1,11 +1,17 @@
-body {
+/*body {
   height: 750px;
-}
+}*/
 
 .panel {
   background-color: red;
   width: 455px;
   margin: 0 auto;
+}
+
+main {
+  outline: dotted 2px orange;
+  top: 0px;
+  bottom: 100px;
 }
 
 main h1 {
@@ -48,6 +54,11 @@ form {
   margin-top: 10px;
 }
 
+#confirm {
+  bottom: 100px;
+}
+
 footer {
-  position: fixed;
+  position: fixed;;
+  bottom: 0;
 }

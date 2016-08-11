@@ -29,6 +29,7 @@ main h2 {
   text-align: center;
 }
 
-footer {
+/*footer {
   position: fixed;
-}
+  clear: both;
+}*/
