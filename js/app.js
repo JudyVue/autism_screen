@@ -112,12 +112,16 @@ function clickSection4Button(){
 //Event Handler- to tally user score when Event Listener is triggered
 
 function handleArray(){
-  event.preventDefault();
-  userSelections = event.target.value;
-  userAnswers.push(userSelections);
-};
+  for (var i = 0; i < radioButtons.length; i++) {
+    if (radioButtons[i].checked === true) {
+      userAnswers.push(radioButtons[i].value);
+    }
+  }
+}
 
 function handleScore(){
+  event.preventDefault();
+  handleArray();
   var counter = 0;
   for (var i = 32; i < radioButtons.length; i ++) {
     if (radioButtons[i].checked === true) {
@@ -129,7 +133,7 @@ function handleScore(){
     alert('Complete all answers.');
     return;
   }
-  for (var i = 0; i < userAnswers.length; i++) {
+  for (i = 0; i < userAnswers.length; i++) {
     if (userAnswers[i] === 'score') {
     }
   }
@@ -143,10 +147,7 @@ function handleScore(){
 showFirstQuestions();
 
 
-//Event Listener- to capture user input from test_page.html and run event handler function handleScore
-for (var i = 0; i < radioButtons.length; i++) {
-  radioButtons[i].addEventListener('change', handleArray);
-}
+//event listeners
 
 document.getElementById('button1').addEventListener('click', clickSection1Button);
 document.getElementById('button2').addEventListener('click', clickSection2Button);
