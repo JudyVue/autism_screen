@@ -87,8 +87,13 @@ function handleScore(event){
   }
   console.log(userAnswers);
   createLocalStorageofScoreNoScoreArray();
-  var scoreStringified = JSON.stringify(score);
-  localStorage.setItem('score', scoreStringified);
+
+  var data = JSON.parse(localStorage.loginArrayStringified);
+  var index = (data.length) - 1;
+  data[index].score = score;
+
+  var loginArrayStringified = JSON.stringify(data);
+  localStorage.setItem('loginArrayStringified', loginArrayStringified);
   location.href = 'results.html';
 }
 
