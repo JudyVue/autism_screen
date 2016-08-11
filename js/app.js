@@ -55,6 +55,8 @@ var question_set3 = document.getElementById('question_set3');
 var question_set4 = document.getElementById('question_set4');
 var question_set5 = document.getElementById('question_set5');
 
+var counter = 0;
+
 function showFirstQuestions(){
   question_set5.style.display = 'none';
   question_set4.style.display = 'none';
@@ -95,6 +97,8 @@ function clickSection4Button(){
   question_set3.style.display = 'none';
   question_set2.style.display = 'none';
   question_set1.style.display = 'none';
+
+
 }
 
 //Event Handler- to tally user score when Event Listener is triggered

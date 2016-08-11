@@ -20,7 +20,17 @@ function makeUserAnswerAllQuestions(){
   }
 }
 
-makeUserAnswerAllQuestions();
+
+for (var i = 0; i < radioButtons.length; i ++) {
+  if (radioButtons[i].checked === false) {
+    alert ('You must complete all questions.');
+    counter += 1;
+    return;
+  }
+  if (counter < 4)
+}
+
+// makeUserAnswerAllQuestions();
 
 
 // function logArrayElements(element, index, array) {

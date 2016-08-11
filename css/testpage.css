@@ -1,0 +1,20 @@
+body {
+  height: 703px;
+}
+
+input {
+  display: inline-block;;
+}
+
+
+#test_questions > div {
+  outline: dotted 2px orange;
+}
+
+button.next {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+
+}
