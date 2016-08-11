@@ -20,14 +20,14 @@ function makeAccordion(){
   }
 }
 
-//parses the data
+
 function parseData(){
   reviewData = JSON.parse(localStorage.userAnswersStringified);
 
 }
 
-getNoScore();
 
+//will check radio buttons with test answers data so user can review and change them
 function grabYesAndNos(){
   for (var j = 0; j < reviewData.length; j++){
     if (reviewData[j] === 'no_score') {
@@ -39,6 +39,8 @@ function grabYesAndNos(){
   }
 }
 
+
+//we are getting all the buttons with a no score value
 function getNoScore(){
   for (var i = 0; i < radioButtons.length; i++){
     if (radioButtons[i].value === 'no_score'){
@@ -47,6 +49,7 @@ function getNoScore(){
   }
 }
 
+//getting all the buttons with score value
 function getYesScore() {
   for (var i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].value === 'score'){
@@ -55,15 +58,14 @@ function getYesScore() {
   }
 }
 
-getYesScore();
-getNoScore();
-
+//saving user reviewed answers in local storage
 function createLocalStorageofScoreNoScoreArray(){
   reviewAnswersStringified = JSON.stringify(userAnswers);
   localStorage.setItem('reviewAnswersStringified', reviewAnswersStringified);
   console.log(reviewAnswersStringified + ' is the stringified array.');
 }
 
+// this handle our array of user answers
 function handleArray() {
   for (var i = 0; i < radioButtons.length; i++) {
     if (radioButtons[i].checked === true) {
@@ -72,6 +74,7 @@ function handleArray() {
   }
 };
 
+//finally, scoring our test with final answers from user, storing it and sending user to review page
 function handleScore(event){
   event.preventDefault();
   handleArray();
@@ -89,6 +92,8 @@ function handleScore(event){
 
 //code on load:
 makeAccordion();
+getYesScore();
+getNoScore();
 parseData();
 grabYesAndNos();
 

@@ -22,12 +22,14 @@ function handleNewLogin() {
       }
     }
   }
-
+  //creating a login object with login data for user
   function Login(username, password) {
     this.username = username;
     this.password = password;
+    this.score = 0;
     loginArray.push(this);
   }
+
   new Login(username, password);
   loginArrayStringified = JSON.stringify(loginArray);
   localStorage.setItem('loginArrayStringified', loginArrayStringified);
