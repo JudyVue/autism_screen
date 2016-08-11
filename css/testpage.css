@@ -12,6 +12,9 @@ button.next {
   height: 50px;
   border-radius: 10px;
   font-size: 20px;
+  position: absolute;
+  top: 475px;
+  left: 45%;
 }
 
 main h2 {
