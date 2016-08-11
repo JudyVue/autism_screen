@@ -101,6 +101,14 @@ nav ul li a{
   float: right;
   padding: 15px;
   margin-top: 26px;
+
+}
+
+nav ul li a:hover {
+  background-color: #cc842f;
+  height: 45px;
+  margin-top: 0px;
+  padding-top: 40px;
 }
 
 main {
