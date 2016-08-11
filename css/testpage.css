@@ -1,5 +1,5 @@
 body {
-  height: 703px;
+  height: 750px;
 }
 
 input {
@@ -7,14 +7,28 @@ input {
 }
 
 
-#test_questions > div {
-  outline: dotted 2px orange;
-}
-
 button.next {
-  width: 100px;
+  width: 110px;
   height: 50px;
   border-radius: 10px;
   font-size: 20px;
+}
 
+main h2 {
+  font-family: "Sanchez", serif;
+  font-size: 50px;
+  color: #51617a;
+}
+
+#submit {
+  width: 300px;
+  height: 80px;
+  padding-left: 25px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
 }

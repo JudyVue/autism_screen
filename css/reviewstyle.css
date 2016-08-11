@@ -1,3 +1,7 @@
+body {
+  height: 750px;
+}
+
 .panel {
   background-color: red;
   width: 455px;
@@ -42,4 +46,8 @@ form {
 
 .radio_buttons {
   margin-top: 10px;
+}
+
+footer {
+  position: fixed;
 }
