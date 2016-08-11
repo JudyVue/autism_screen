@@ -1,3 +1,6 @@
+body {
+  height: 650px;
+}
 
 .panel {
   background-color: red;
@@ -51,11 +54,12 @@ form {
   margin-top: 10px;
 }
 
+
 #confirm {
-  top: 100px;
-  bottom: 100px;
+  margin: 50px 0 100px 0;
 }
 
 footer {
-  bottom: -50px;
+  position: fixed;
+  bottom: 0;
 }
