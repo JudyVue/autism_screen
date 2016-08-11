@@ -145,3 +145,13 @@ footer {
   position: absolute;
   bottom: 0;
 }
+
+footer p {
+  margin: 0 auto;
+  color: #EFEFEF;
+  font-family: "Sanchez", serif;
+  font-size: 14px;
+  display: inline-block;
+  width: 1000px;
+  padding: 5px;
+}
