@@ -5,6 +5,7 @@ var questionArray = [];
 var userAnswers = [];
 var radioButtons = document.getElementsByClassName('radio_buttons');
 var userAnswersStringified = [];
+var counter = 0;
 
 //Running Function and Checking Array
 function createLocalStorageofScoreNoScoreArray(){
@@ -31,7 +32,6 @@ function showFirstQuestions(){
 
 
 function clickSection1Button() {
-  var counter = 0;
   for (var i = 0; i < radioButtons.length - 32; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
@@ -49,7 +49,6 @@ function clickSection1Button() {
 }
 
 function clickSection2Button() {
-  var counter = 0;
   for (var i = 8; i < radioButtons.length - 24; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
@@ -67,7 +66,6 @@ function clickSection2Button() {
 }
 
 function clickSection3Button(){
-  var counter = 0;
   for (var i = 16; i < radioButtons.length - 16; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
@@ -85,7 +83,6 @@ function clickSection3Button(){
 }
 
 function clickSection4Button(){
-  var counter = 0;
   for (var i = 24; i < radioButtons.length - 8; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
@@ -100,9 +97,9 @@ function clickSection4Button(){
   question_set3.style.display = 'none';
   question_set2.style.display = 'none';
   question_set1.style.display = 'none';
-
-
 }
+
+
 
 //Event Handler- to tally user score when Event Listener is triggered
 
@@ -146,5 +143,10 @@ document.getElementById('button1').addEventListener('click', clickSection1Button
 document.getElementById('button2').addEventListener('click', clickSection2Button);
 document.getElementById('button3').addEventListener('click', clickSection3Button);
 document.getElementById('button4').addEventListener('click', clickSection4Button);
+
+document.getElementById('backbutton2').addEventListener('click',showFirstQuestions);
+document.getElementById('backbutton3').addEventListener('click',clickSection1Button);
+document.getElementById('backbutton4').addEventListener('click',clickSection2Button);
+document.getElementById('backbutton5').addEventListener('click',clickSection3Button);
 
 document.getElementById('submit').addEventListener('click', handleScore);
