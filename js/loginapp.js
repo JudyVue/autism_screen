@@ -29,6 +29,7 @@ function handleSignInAttempt() {
   }
   for (var j = 0; j < storedData.length; j++) {
     if (storedData[j].username === username && storedData[j].password === password){
+      var session = localStorage.setItem('session', username);
       location.href = 'results.html';
     }
   }

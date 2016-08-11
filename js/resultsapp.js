@@ -3,15 +3,24 @@ var lowRisk = document.getElementById('low_risk');
 var mediumRisk = document.getElementById('medium_risk');
 var highRisk = document.getElementById('high_risk');
 var data = JSON.parse(localStorage.loginArrayStringified);
-var index = (data.length) - 1;
 var finalScore = document.getElementById('final_score');
+var index = (data.length) - 1;
+var score = data[index].score;
 
-if (data[index].score < 3) {
+
+for (var i = 0; i < data.length; i++) {
+  if (data[i].username === localStorage.session) {
+    score = data[i].score;
+  }
+}
+
+
+if (score < 3) {
   lowRisk.style.display = 'block';
-}else if (data[index].score < 8){
+}else if (score < 8){
   mediumRisk.style.display = 'block';
 }else {
   highRisk.style.display = 'block';
 }
 
-finalScore.textContent = 'Your score is ' + data[index].score + ':';
+finalScore.textContent = 'Your score is ' + score + ':';
