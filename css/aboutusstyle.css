@@ -1,5 +1,5 @@
 body {
-  height: 1700px;
+  height: 1800px;
 }
 h1 {
   color: #51617a;
@@ -11,6 +11,7 @@ h2 {
   color: #cc842f;
   font-weight: bold;
   font-family: 'Sanchez', serif;
+  margin-top: 30px;
 }
 
 img {
