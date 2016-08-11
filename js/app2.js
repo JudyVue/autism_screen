@@ -8,7 +8,6 @@ var reviewAnswersStringified;
 var userAnswers = [];
 var radioButtonsNoScore = [];
 var radioButtonsYesScore = [];
-var radioButtons = document.getElementsByClassName('radio_buttons');
 
 
 function makeAccordion(){
