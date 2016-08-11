@@ -59,6 +59,7 @@ form {
 }
 
 footer {
-  position: fixed;;
-  bottom: 0;
+  position: fixed;
+  top: 700px;
+  bottom: 0px;
 }
