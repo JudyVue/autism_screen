@@ -18,7 +18,6 @@ function handleSignInAttempt() {
           event.target.password.value = null;
         }
         loginTry++;
-        console.log(loginTry);
         break;
       };
     }

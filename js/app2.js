@@ -32,7 +32,6 @@ function grabYesAndNos(){
   for (var j = 0; j < reviewData.length; j++){
     if (reviewData[j] === 'no_score') {
       radioButtonsNoScore[j].checked = true;
-      console.log('checking no scores');
     }else {
       radioButtonsYesScore[j].checked = true;
     }
@@ -64,7 +63,6 @@ function getYesScore() {
 function createLocalStorageofScoreNoScoreArray(){
   reviewAnswersStringified = JSON.stringify(userAnswers);
   localStorage.setItem('reviewAnswersStringified', reviewAnswersStringified);
-  console.log(reviewAnswersStringified + ' is the stringified array.');
 }
 
 // this handle our array of user answers
@@ -85,7 +83,7 @@ function handleScore(event){
       score++;
     }
   }
-  console.log(userAnswers);
+
   createLocalStorageofScoreNoScoreArray();
 
   var data = JSON.parse(localStorage.loginArrayStringified);

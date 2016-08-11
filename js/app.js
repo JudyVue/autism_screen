@@ -10,7 +10,6 @@ var userAnswersStringified = [];
 function createLocalStorageofScoreNoScoreArray(){
   userAnswersStringified = JSON.stringify(userAnswers);
   localStorage.setItem('userAnswersStringified', userAnswersStringified);
-  console.log(userAnswersStringified + ' is the stringified array.');
 }
 
 //code to hide and display test question divs on test_page.html
@@ -36,7 +35,6 @@ function clickSection1Button() {
   for (var i = 0; i < radioButtons.length - 32; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
-      console.log('There are ' + counter + ' answers chosen.');
     }
   }
   if (counter < 4) {
@@ -55,7 +53,6 @@ function clickSection2Button() {
   for (var i = 8; i < radioButtons.length - 24; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
-      console.log('There are ' + counter + ' answers chosen.');
     }
   }
   if (counter < 4) {
@@ -74,7 +71,6 @@ function clickSection3Button(){
   for (var i = 16; i < radioButtons.length - 16; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
-      console.log('There are ' + counter + ' answers chosen.');
     }
   }
   if (counter < 4) {
@@ -93,7 +89,6 @@ function clickSection4Button(){
   for (var i = 24; i < radioButtons.length - 8; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
-      console.log('There are ' + counter + ' answers chosen.');
     }
   }
   if (counter < 4) {
@@ -126,7 +121,6 @@ function handleScore(){
   for (var i = 32; i < radioButtons.length; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
-      console.log('There are ' + counter + ' answers chosen.');
     }
   }
   if (counter < 4) {
@@ -137,7 +131,6 @@ function handleScore(){
     if (userAnswers[i] === 'score') {
     }
   }
-  console.log(userAnswers);
   createLocalStorageofScoreNoScoreArray();
   location.href = 'reviewpage.html';
 }
