@@ -2,6 +2,24 @@ body {
   height: 2000px;
 }
 
+table {
+  /*outline: dotted 5px orange;*/
+}
+
+td {
+  /*outline: dotted 2px red;*/
+  padding-right: 10px;
+  padding-bottom: 70px;
+  padding-left:30px;
+  color: #51617a;
+  text-align: justify;
+  width: 499px;
+  margin-left: 25%;
+  margin-top: 30px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+}
+
 #low_risk {
   display: none;
 }
@@ -12,6 +30,47 @@ body {
 
 #high_risk {
   display: none;
+}
+
+img {
+  width: 310px;
+  height: 150px;
+}
+
+img:hover {
+  opacity: 0.5;
+}
+
+#uw_autism {
+  height: 100px;
+}
+
+#chdd{
+  width: 100px;
+  height:80px;
+  display: block;
+  margin: 0 auto;
+}
+
+#homecentral {
+  height: 110px;
+}
+
+#cogwheel {
+    width: 340px;
+    height: 110px;
+}
+
+#rhyther {
+  height: 120px;
+}
+
+#waa {
+  width: 240px;
+}
+
+#fb {
+  width: 180px;
 }
 
 section h1 {
