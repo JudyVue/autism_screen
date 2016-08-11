@@ -1,5 +1,6 @@
 /*body {
   height: 750px;
+  position: relative;
 }*/
 
 .panel {
@@ -12,6 +13,7 @@ main {
   outline: dotted 2px orange;
   top: 0px;
   bottom: 100px;
+  position: relative;
 }
 
 main h1 {
@@ -59,7 +61,7 @@ form {
 }
 
 footer {
-  position: fixed;
-  top: 700px;
+  position:absolute;
   bottom: 0px;
+  outline: dotted 5px orange;
 }
