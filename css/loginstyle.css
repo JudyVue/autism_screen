@@ -30,3 +30,8 @@ button {
 body {
   height: 650px;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
