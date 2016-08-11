@@ -10,6 +10,14 @@ function handleNewLogin() {
   event.preventDefault();
   var username = event.target.username.value;
   var password = event.target.password.value;
+
+  //logic to keep people from taking the test with no username
+  var usernameInput = document.forms["loginForm"]["username"].value;
+  var passwordInput = document.forms["loginForm"]["password"].value;
+  if ((usernameInput === null || usernameInput === '') && (passwordInput === null || passwordInput === '')){
+    alert('Please enter a username and password.');
+    return;
+  };
   //username already exists logic:
   if (localStorage.loginArrayStringified) {
     storedData = JSON.parse(localStorage.loginArrayStringified);
