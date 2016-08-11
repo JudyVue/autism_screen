@@ -29,7 +29,7 @@ function handleSignInAttempt() {
   }
   for (var j = 0; j < storedData.length; j++) {
     if (storedData[j].username === username && storedData[j].password === password){
-      location.href = 'instructions.html';
+      location.href = 'results.html';
     }
   }
 }

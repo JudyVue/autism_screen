@@ -22,19 +22,21 @@ function handleNewLogin() {
       }
     }
   }
-  //creating a login object with login data for user
+  if (localStorage.loginArrayStringified) {
+    loginArray = JSON.parse(localStorage.loginArrayStringified);
+  }
   function Login(username, password) {
     this.username = username;
     this.password = password;
     this.score = 0;
     loginArray.push(this);
   }
-
   new Login(username, password);
   loginArrayStringified = JSON.stringify(loginArray);
   localStorage.setItem('loginArrayStringified', loginArrayStringified);
   console.log(loginArrayStringified);
   location.href = 'instructions.html';
+
 }
 
 
