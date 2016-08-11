@@ -1,5 +1,5 @@
 body {
-  height: 750px;
+  height: 850px;
 }
 
 input {
@@ -25,11 +25,18 @@ main h2 {
   width: 300px;
   height: 80px;
   padding-left: 25px;
-  border-radius: 10px;
+  margin: 20px 0;
   font-size: 20px;
   text-align: center;
+  position: absolute;
+  top: 500px;
+  margin: 30px 0;
+  left: 35%;
 }
 
-/*footer {
-  clear: both;
-}*/
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-top: 150px;
+}
