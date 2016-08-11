@@ -12,6 +12,13 @@ soft white background color: #f8f8f8;
 
 */
 
+main h2 {
+  color: #51617a;
+  font-size: 30px;
+  font-family: "Sanchez", serif;
+  margin: 40px 0;
+  text-align: center;
+}
 #loginForm{
   text-align: center;
   font-family: "Vollkorn", serif;
