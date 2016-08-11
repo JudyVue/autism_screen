@@ -15,7 +15,6 @@ function handleNewLogin() {
     storedData = JSON.parse(localStorage.loginArrayStringified);
     for (var i = 0; i < storedData.length; i++) {
       if (storedData[i].username === username) {
-        console.log(storedData[i].username);
         alert('username already exists');
         event.target.username.value = null;
         event.target.password.value = null;
@@ -35,7 +34,6 @@ function handleNewLogin() {
   new Login(username, password);
   loginArrayStringified = JSON.stringify(loginArray);
   localStorage.setItem('loginArrayStringified', loginArrayStringified);
-  console.log(loginArrayStringified);
   location.href = 'instructions.html';
 
 }
