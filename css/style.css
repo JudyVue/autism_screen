@@ -105,10 +105,10 @@ nav ul li a{
 }
 
 nav ul li a:hover {
-  background-color: #cc842f; 
-  height: 45px;
+  background-color: #cc842f;
+  height: 44px;
   margin-top: 0px;
-  padding-top: 40px;
+  padding-top: 41px;
 }
 
 main {
