@@ -9,7 +9,6 @@ input {
 button.next {
   width: 110px;
   height: 50px;
-  border-radius: 10px;
   font-size: 20px;
   position: absolute;
   top: 475px;
