@@ -3,6 +3,7 @@ var loginForm = document.getElementById('loginForm');
 var loginArray = [];
 var loginArrayStringified;
 var storedData = [];
+localStorage.session = '';
 
 
 function handleNewLogin() {
