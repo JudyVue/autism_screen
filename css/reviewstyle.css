@@ -1,7 +1,3 @@
-/*body {
-  height: 750px;
-  position: relative;
-}*/
 
 .panel {
   background-color: red;
@@ -10,10 +6,8 @@
 }
 
 main {
-  outline: dotted 2px orange;
   top: 0px;
   bottom: 100px;
-  position: relative;
 }
 
 main h1 {
@@ -50,6 +44,7 @@ form {
 
 #question_set5 {
   height: 460px;
+  margin-bottom: 50px;
 }
 
 .radio_buttons {
@@ -57,11 +52,10 @@ form {
 }
 
 #confirm {
+  top: 100px;
   bottom: 100px;
 }
 
 footer {
-  position:absolute;
-  bottom: 0px;
-  outline: dotted 5px orange;
+  bottom: -50px;
 }
