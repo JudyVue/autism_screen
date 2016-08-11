@@ -138,7 +138,7 @@ button:hover {
 }
 
 footer {
-  background: rgba(81,97,122,0.9);
+  background: rgb(81,97,122);
   height: 50px;
   width: 100%;
   clear: both;
