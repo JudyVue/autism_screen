@@ -112,7 +112,7 @@ function handleArray(){
 function handleScore(){
   event.preventDefault();
   handleArray();
-  var counter = 0;
+  counter = 0;
   for (var i = 32; i < radioButtons.length; i ++) {
     if (radioButtons[i].checked === true) {
       counter += 1;
@@ -121,10 +121,6 @@ function handleScore(){
   if (counter < 4) {
     alert('Complete all answers.');
     return;
-  }
-  for (i = 0; i < userAnswers.length; i++) {
-    if (userAnswers[i] === 'score') {
-    }
   }
   createLocalStorageofScoreNoScoreArray();
   location.href = 'reviewpage.html';
