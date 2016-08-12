@@ -16,11 +16,17 @@ function handleSignInAttempt() {
           alert('Username and password do not match. Please try again.');
           event.target.username.value = null;
           event.target.password.value = null;
+        }else if (storedData[i].username !== username) {
+          alert('Sorry, we can\'t find your account. Please sign up');
+          location.href = 'index.html';
         }
         loginTry++;
         break;
       };
     }
+  }else {
+    alert('Sorry, we can\'t find your account. Please sign up');
+    location.href = 'index.html';
   }
   if (loginTry === 3){
     alert('You have reached the maximum login attempts allowed. Please create a new account.');
@@ -28,7 +34,7 @@ function handleSignInAttempt() {
   }
   for (var j = 0; j < storedData.length; j++) {
     if (storedData[j].username === username && storedData[j].password === password){
-      var session = localStorage.setItem('session', username);
+      localStorage.setItem('session', username);
       location.href = 'results.html';
     }
   }
