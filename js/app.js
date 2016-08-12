@@ -1,7 +1,5 @@
 'use strict';
 //Establishing Global Variables
-var userSelections;
-var questionArray = [];
 var userAnswers = [];
 var radioButtons = document.getElementsByClassName('radio_buttons');
 var userAnswersStringified = [];
