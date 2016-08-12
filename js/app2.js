@@ -42,7 +42,7 @@ function grabYesAndNos(){
 //we are getting all the buttons with a no score value
 function getNoScore(){
 
-  var counter = 0;
+  // var counter = 0;
   for (var i = 0; i < radioButtons.length; i++){
     if (radioButtons[i].value === 'no_score'){
       radioButtonsNoScore.push(radioButtons[i]);
